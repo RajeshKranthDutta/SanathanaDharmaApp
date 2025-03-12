@@ -1,0 +1,123 @@
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4c542; /* Saffron background color */
+    margin: 0;
+    padding: 0;
+    text-align: center; /* Center the header text horizontally */
+}
+
+/* Header styling */
+header {
+    background-color: #f4c542; /* Match background color */
+    padding: 20px 0; /* Add some padding to create space */
+    position: relative;
+    z-index: 1; /* Keep header on top */
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #ffffff; /* White text */
+    margin: 0;
+    text-align: center; /* Ensure header is centered */
+}
+
+/* Section for the links (Bhagavad Gita, Vedas, Upanishads) */
+.literature {
+    margin-top: 160px; /* Add more space below the header */
+}
+
+.content-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content-links a {
+    background-color: #ffffff;
+    color: #000000;
+    text-decoration: none;
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    border-radius: 8px;
+    margin: 10px;
+    width: 60%; /* Ensure the link is centered and does not span the full width */
+    max-width: 500px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.content-links a:hover {
+    background-color: #f49e42; /* Darker saffron background on hover */
+    color: #ffffff; /* White text on hover */
+    transform: scale(1.05); /* Slightly enlarge the link on hover */
+}
+
+/* Image gallery */
+.gods-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.gods-gallery img {
+    width: 200px;  /* Set a fixed width for all images */
+    height: 200px; /* Set a fixed height for all images */
+    margin: 10px;
+    cursor: pointer;
+    object-fit: contain; /* Ensures the full image is visible without cropping */
+    transition: transform 0.3s ease; /* Smooth zoom effect */
+}
+
+.gods-gallery img:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+/* Modal styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.8); /* Black background with transparency */
+    padding-top: 60px;
+}
+
+/* Modal content for enlarged image */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%; /* Size of enlarged image */
+    max-width: 1200px; /* Ensure the image is large enough to show zoom effect */
+    object-fit: contain;  /* Ensure the image fits well without stretching */
+}
+
+/* Caption text */
+#caption {
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+}
+
+/* Close button */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
