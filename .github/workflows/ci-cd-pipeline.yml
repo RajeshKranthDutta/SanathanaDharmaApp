@@ -61,7 +61,6 @@ jobs:
         kubectl apply -f Kubernetes/deployment.yaml
         kubectl apply -f Kubernetes/service.yaml      
     
-
     - name: Deploy to AKS
       run: |
         kubectl set image deployment/myapp-deployment myapp-container=k8steamcontainerregistry.azurecr.io/myapp:$GITHUB_SHA
