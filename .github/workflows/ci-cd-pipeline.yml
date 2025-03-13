@@ -51,6 +51,10 @@ jobs:
     - name: Verify Azure login
       run: |
         az account show
+
+    - name: Get AKS credentials
+      run: |
+        az aks get-credentials --resource-group gpuk8srg --name k8s4gpu  
     
 
     - name: Deploy to AKS
