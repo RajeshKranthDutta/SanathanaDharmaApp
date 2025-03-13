@@ -54,7 +54,12 @@ jobs:
 
     - name: Get AKS credentials
       run: |
-        az aks get-credentials --resource-group gpuk8srg --name k8s4gpu  
+        az aks get-credentials --resource-group gpuk8srg --name k8s4gpu
+
+    - name: Apply Kubernetes deployment (create if not exists)
+      run: |
+        kubectl apply -f Kubernetes/deployment.yaml
+        kubectl apply -f Kubernetes/service.yaml      
     
 
     - name: Deploy to AKS
