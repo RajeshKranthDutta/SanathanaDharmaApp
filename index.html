@@ -52,6 +52,19 @@
     </div>
 
     <script src="app.js"></script>
+    <script>
+        // Array of quotes from Sanathana Dharma
+        const quotes = [
+            "You have the right to work, but never to the fruit of work. – Bhagavad Gita",
+            "There is neither this world nor the world beyond. How can there be happiness without peace? – Bhagavad Gita",
+            "The mind is everything. What you think you become. – Bhagavad Gita",
+            "Arise, awake, and stop not until the goal is reached. – Swami Vivekananda"
+        ];
+        
+        
+           // Display a random quote
+        document.getElementById('quote').innerText = quotes[Math.floor(Math.random() * quotes.length)];
+    </script>
 
 
 </body>
