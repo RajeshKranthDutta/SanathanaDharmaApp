@@ -32,14 +32,19 @@
             </div>
         </section>
 
+        <section class="quote-of-the-day">
+            <h2>Quote of the Day</h2>
+            <p id="quote"></p> <!-- This will be populated by JavaScript -->
+        </section>
+
         <section class="gods">
             <h2>Hindu Gods</h2>
             <div class="gods-gallery">
-                <img id="krishna" class="gallery-image" alt="Sri Krishna">
-                <img id="shiva" class="gallery-image" alt="Lord Shiva">
-                <img id="hanuman" class="gallery-image" alt="Lord Hanuman">
-                <img id="ganesha" class="gallery-image" alt="Lord Ganesha">
-                <img id="durga" class="gallery-image" alt="Goddess Durga">
+                <img id="krishna" class="gallery-image fade-in" alt="Sri Krishna">
+                <img id="shiva" class="gallery-image fade-in" alt="Lord Shiva">
+                <img id="hanuman" class="gallery-image fade-in" alt="Lord Hanuman">
+                <img id="ganesha" class="gallery-image fade-in" alt="Lord Ganesha">
+                <img id="durga" class="gallery-image fade-in" alt="Goddess Durga">
             </div>
         </section>
     </main>
@@ -60,12 +65,12 @@
             "The mind is everything. What you think you become. – Bhagavad Gita",
             "Arise, awake, and stop not until the goal is reached. – Swami Vivekananda"
         ];
-        
-        
-           // Display a random quote
-        document.getElementById('quote').innerText = quotes[Math.floor(Math.random() * quotes.length)];
+
+        // Function to display a random quote
+        document.addEventListener("DOMContentLoaded", function() {
+            const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+            document.getElementById('quote').innerText = randomQuote;
+        });
     </script>
-
-
 </body>
 </html>
